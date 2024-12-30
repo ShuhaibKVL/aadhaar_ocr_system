@@ -76,7 +76,7 @@ const ImageUpload = () => {
     return (    
         <div className="min-h-screen flex md:flex-raw">
       {/* Left Section - 40% */}
-      <div className="w-full md:w-2/5 bg-emerald-600 p-6">
+      <div className="w-full md:w-2/5 bg-white p-6">
         <div className="max-w-md mx-auto">
           <h1 className="text-2xl font-semibold text-white mb-4">
             Aadhar Card Verification
