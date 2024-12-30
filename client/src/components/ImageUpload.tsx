@@ -48,7 +48,6 @@ const ImageUpload = () => {
     
 
     const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
-        console.log('handle submit')
         e.preventDefault()
 
         if (!frontImage || !backImage) {
@@ -62,7 +61,6 @@ const ImageUpload = () => {
         try {
             setLoading(true)
             const response = await ImageUploadService(formData)
-            console.log('Response :',response)
             if(response?.status){
                 setExtractedData(response.data)
             }else if(!response?.status){
@@ -70,6 +68,7 @@ const ImageUpload = () => {
             }
             setLoading(false)
         } catch (error) {
+          setLoading(false)
             console.log('Error uploading images',error)
         }
         

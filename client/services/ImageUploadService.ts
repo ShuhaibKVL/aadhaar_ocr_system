@@ -1,7 +1,6 @@
 import axios from "axios"
 
 export const ImageUploadService =async(data:FormData) => {
-    console.log('backendUrl :',import.meta.env.VITE_BACKEND_URL)
     const backendUrl = import.meta.env.VITE_BACKEND_URL || null
     
     if(!backendUrl){
