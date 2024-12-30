@@ -8,8 +8,12 @@ const app = express()
 dotenv.config()
 app.use(express.json());
 
+if(!process.env.FRONT_URL){
+     console.log('env.front_url not getting')
+} 
+
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.FRONT_URL,
     methods: ['POST', 'GET'],     
     credentials: true            
 }));
