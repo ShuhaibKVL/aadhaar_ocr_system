@@ -6,7 +6,7 @@ The Aadhaar OCR System is a web-based application that allows users to upload up
 
 - **User-Friendly Interface**: Simple and intuitive UI for uploading Aadhaar card images.
 - **Image Upload**: Supports uploading front and back images separately.
-- **Format Support**: Accepts `.png`, `.jpg`, and `.jpeg` image formats up to 5 MB.
+- **Format Support**: Accepts `.png`, `.jpg`, and `.jpeg` image formats up to 2 MB.
 - **Loading Indicator**: Displays a spinner while processing OCR.
 - **Error Handling**: Shows user-friendly error messages for invalid uploads or processing issues.
 - **Data Extraction**: 

@@ -43,6 +43,9 @@ export const extractAadhaarDetails = async(imagePath,mode) => {
             const gender = text.toLowerCase().includes('male') ? 'MALE' : 
                           text.toLowerCase().includes('female') ? 'FEMALE' : null;
 
+            if(!aadhaarNumber || !name){
+                return {success:false,error:'Upload a exact aadhaar card front image.'}
+            }
             return {
                 success: true,
                 data: {
@@ -73,6 +76,12 @@ export const extractAadhaarDetails = async(imagePath,mode) => {
             console.log('addressMatch :',addressMatch)
             console.log('address :',address)
 
+            if(!pincode){
+                return {
+                    success:false,
+                    error:"Upload a exact back image of your aadhaar"
+                }
+            }
             return {
                 success:true,
                 data:{
