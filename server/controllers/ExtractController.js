@@ -29,7 +29,7 @@ export const extractImage = async(req,res) => {
 
         // send the function false if both data not get
         if (!frontImageData.success || !backImageData.success) {
-            return res.status(200).json({status:false, error: 'Images not extracted..! Please choose another image' });
+            return res.status(200).json({status:false, error: 'Images not extracted..! Please upload a proper aadhaar image' });
         }
         return res.status(200).json({
             status:true,
